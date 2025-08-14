@@ -24,20 +24,20 @@ html {
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
-  width: 5px; /* عرض الشريط */
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; /* لون الخلفية */
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--main-color); /* اللون الأساسي */
+  background: var(--main-color);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--second-color); /* أغمق شوية عند المرور عليه */
+  background: var(--second-color); 
 }
 ::selection {
   color: white;
@@ -238,7 +238,6 @@ header .container .sidebar li button:hover {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
   min-height: calc(100vh - 69.9px);
 }
 .landing .container .content {
@@ -301,11 +300,6 @@ header .container .sidebar li button:hover {
   animation: animate-gradient 2.5s linear infinite;
   transition: var(--main-transition);
 }
-@media (max-width: 767px) {
-  .landing .container .content a {
-    font-size: 18px;
-  }
-}
 .landing .container .content a:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 10px 3px var(--main-color);
@@ -353,16 +347,20 @@ header .container .sidebar li button:hover {
   border-radius: 50px;
 }
 @media (max-width: 991px) {
+  .landing .container {
+    align-content: space-evenly;
+  }
   .landing .container .content {
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    padding-left: 10px;
+    margin: 30px 0;
   }
   .landing .container .content h1 {
     font-size: 40px;
-    margin-top: 50px;
+    margin-top: 0px;
   }
   .landing .container .content h2 {
     font-size: 23px;
@@ -370,12 +368,15 @@ header .container .sidebar li button:hover {
   .landing .container .content p {
     font-size: 16px;
   }
-  .landing .container .content button {
-    font-size: 15px;
+  .landing .container .content a {
+    font-size: 18px;
+    margin: 10px auto;
   }
   .landing .container .photo{
     flex-basis: 70%;
-    margin: 80px auto 80px;
+    max-width: 350px;
+    margin: 20px auto 0px;
+    order: -1;
   }
 }
 /* End Landing */
@@ -593,6 +594,7 @@ header .container .sidebar li button:hover {
 }
 .contact .box {
   flex-basis: 30%;
+  transform: translateY(-50px);
 }
 @media (max-width: 991px) {
   .contact .box {
@@ -609,7 +611,7 @@ header .container .sidebar li button:hover {
 .contact .box .social > a {
   display: block;
   color: var(--main-color);
-  margin-bottom: 25px;
+  padding: 10px 0;
   font-size: 20px;
   transition: var(--main-transition);
 }

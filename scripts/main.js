@@ -48,3 +48,39 @@ document.addEventListener("DOMContentLoaded", () => {
     if (sidebar) sidebar.style.display = "none";
   };
 });
+
+
+
+
+
+
+
+
+
+
+const form = document.getElementById("contactForm");
+const status = document.getElementById("formStatus");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  fetch(form.action, {
+    method: form.method,
+    body: new FormData(form),
+    headers: { Accept: "application/json" },
+  })
+    .then((response) => {
+      if (response.ok) {
+        status.textContent = "Message sent successfully!";
+        status.style.color = "#53f8c9";
+        form.reset();
+      } else {
+        status.textContent = "Oops! Something went wrong.";
+        status.style.color = "#ca342b";
+      }
+    })
+    .catch(() => {
+      status.textContent = "Oops! Something went wrong.";
+      status.style.color = "#ca342b";
+    });
+});

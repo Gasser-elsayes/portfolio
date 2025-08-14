@@ -175,10 +175,11 @@ header .container .sidebar li {
 }
 header .container .sidebar li a {
   display: block;
-  padding: 30px;
+  padding: 25px;
   width: 100%;
   color: var(--main-color);
   transition: var(--main-transition);
+  border-bottom: 2px solid #4ad0ee10;
 }
 header .container .sidebar li a:hover {
   background-color: #53f8c942;
@@ -187,7 +188,7 @@ header .container .sidebar li a:hover {
 header .container .sidebar li button {
   width: 100%;
   color: var(--main-color);
-  padding: 30px;
+  padding: 20px;
   border: none;
   background-color: transparent;
   transition: var(--main-transition);
@@ -283,6 +284,11 @@ header .container .sidebar li button:hover {
   -webkit-text-fill-color: transparent;
   animation: animate-gradient 2.5s linear infinite;
   transition: var(--main-transition);
+}
+@media (max-width: 767px) {
+  .landing .container .content a {
+    font-size: 18px;
+  }
 }
 .landing .container .content a:hover {
   transform: scale(1.05);
@@ -481,6 +487,7 @@ header .container .sidebar li button:hover {
 }
 .contact .form {
   flex-basis: 60%;
+  text-align: center;
 }
 @media (max-width: 991px) {
   .contact .form {
@@ -556,7 +563,7 @@ header .container .sidebar li button:hover {
   padding: 10px 20px;
   margin-left: auto;
   text-transform: uppercase;
-  transition: var(--main-transition);
+  transition: var(--main-transition)
 }
 .contact .form input[type="submit"]:hover {
   border-color: var(--second-color);
@@ -653,5 +660,9 @@ footer .container {
 }
 footer .container p {
   line-height: 2;
+}
+footer .container p span {
+  color: var(--main-color);
+  font-weight: bold;
 }
 /* End Footer */

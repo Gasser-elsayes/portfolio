@@ -23,6 +23,22 @@
 html {
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  width: 5px; /* عرض الشريط */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* لون الخلفية */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color); /* اللون الأساسي */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--second-color); /* أغمق شوية عند المرور عليه */
+}
 ::selection {
   color: white;
   background-color: var(--main-color);

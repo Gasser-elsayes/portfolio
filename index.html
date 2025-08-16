@@ -129,12 +129,12 @@
     <div class="container">
       <form action="https://formspree.io/f/xpwlnaeg" class="form" method="post" id="contactForm">
         <div class="form-group">
-          <input type="text" id="name" name="name" placeholder=" ">
+          <input type="text" id="name" name="name" placeholder=" " required minlength="2">
           <label for="name">Name</label>
         </div>
         
         <div class="form-group">
-          <input type="email" id="email" name="email" placeholder=" ">
+          <input type="email" id="email" name="email" placeholder=" " required>
           <label for="email">Email</label>
         </div>
         
@@ -144,7 +144,7 @@
         </div>
         
         <div class="form-group">
-          <textarea name="message" id="message" placeholder=" "></textarea>
+          <textarea name="message" id="message" placeholder=" " required ></textarea>
           <label for="message">Message</label>
         </div>
         <input type="submit" value="Send message">
@@ -178,4 +178,5 @@
   <script src="scripts/main.js"></script>
   <!-- End Script -->
 </body>
+
 </html>
